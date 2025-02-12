@@ -16,6 +16,7 @@ body {
   --paragraph-color: #141414;
   --poppins-font: "Poppins";
   --raleway: "Raleway";
+  --section-clip: polygon(0 0, 100% 0%, 100% 95%, 0% 100%);
 }
 
 .container {
@@ -87,6 +88,11 @@ h6,
   font-family: var(--raleway);
   color: inherit;
 }
+p,
+.p{
+color: inherit;
+}
+
 .richtext:has(p) {
   font-size: 16px;
   font-family: var(--poppins-font);
@@ -205,7 +211,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  clip-path: polygon(0 0, 100% 0%, 100% 95%, 0% 100%);
+  clip-path:var(--section-clip);
 }
 .hero-section::after {
   content: "";
@@ -227,6 +233,7 @@ header {
 .hero-item {
   display: flex;
   align-items: center;
+  min-height: 700px;
 }
 .hero-text {
   z-index: 3;
@@ -481,4 +488,49 @@ input:focus-visible {
 .partnership-logo img {
   height: 100%;
   width: fit-content;
+}
+
+
+/* about-us-page */
+.inner-hero-section{
+  background-image:url(../images/about-us-banner.png);
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  clip-path:var(--section-clip);
+}
+.inner-hero-section::after{
+  content: "";
+  background-image: url(../images/about-us-shadow.svg);
+  position: absolute;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30%;
+  width: 100%;
+  z-index: 2;
+  left: 0;
+  top: 0;
+}
+.inner-hero-section .container ,.inner-hero-section .hero-item{
+  height: 100%;
+}
+.inner-hero-title{
+  color: var(--white);
+  font-size: 80px;
+  font-weight: 200;
+}
+.inner-hero-title span{
+font-size: 170px;
+font-weight: 600;
+}
+
+.inner-hero-section .hero-text .inner-hero-paragraph p{
+  color: var(--white);
+  opacity: 1.0 !important;
+  max-width: 596px;
+  margin-bottom: 20px;
 }
