@@ -150,6 +150,10 @@
   .cta-text-item{
     order: 2;
   }
+  .two-col-img img {
+    width: calc(100% + 32px);
+    margin: 0 -16px;
+  }
 }
 @media (max-width: 767px) {
   h1,
