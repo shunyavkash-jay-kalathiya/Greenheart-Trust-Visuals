@@ -28,6 +28,7 @@
     top: 0px;
     width: 100%;
     left: 0px;
+    z-index: 9;
     height: 100vh;
     padding: 86px 40px 34px;
   }
@@ -94,12 +95,12 @@
   }
   .two-col-1 .two-col-item,
   .two-col-sec .two-col-item,
-    .two-col-sec-3 .two-col-item {
+  .two-col-sec-3 .two-col-item {
     order: 2;
   }
   .two-col-1 .two-col-text,
-  .two-col-sec .two-col-text ,
-    .two-col-sec-3 .two-col-item{
+  .two-col-sec .two-col-text,
+  .two-col-sec-3 .two-col-item {
     order: 1;
   }
   .two-col-1,
@@ -127,32 +128,78 @@
   .footer-links-list {
     margin-bottom: 30px;
   }
-  .sec-padding{
+  .sec-padding {
     padding: 70px 0;
   }
-  .two-col-sec{
-       margin-top: 30px;
-       margin-bottom: 0;
+  .two-col-sec {
+    margin-top: 30px;
+    margin-bottom: 0;
   }
-  .cta-img{
+  .cta-img {
     width: 100%;
     height: 100%;
     min-height: 100%;
   }
-  .cta-grid{
+  .cta-grid {
     grid-template-columns: repeat(1, 1fr);
   }
-  .cta-img-item{
+  .cta-img-item {
     height: fit-content;
     width: 100%;
     order: 1;
   }
-  .cta-text-item{
+  .cta-text-item {
     order: 2;
   }
   .two-col-img img {
     width: calc(100% + 32px);
     margin: 0 -16px;
+  }
+  .blog-card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .inner-title {
+    font-size: 60px;
+  }
+
+  .inner-title span {
+    font-size: 80px;
+  }
+
+  .cta-flex {
+    flex-direction: column-reverse;
+  }
+
+  .cta-text-item-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .title-cta-2 {
+    text-align: center;
+  }
+
+  .cta-text-item-2 {
+    width: 100%;
+    height: fit-content;
+  }
+
+  .title-cta-2 span {
+    display: inline-block;
+  }
+
+  .cta-img-3 {
+    width: calc(100% + 32px);
+    height: calc(100% + 40px);
+    margin: -40px -16px 20px -16px;
+    max-width: 776px;
+    max-height: 382px;
+  }
+  .title-cta-2 {
+    font-size: 50px;
   }
 }
 @media (max-width: 767px) {
@@ -202,5 +249,19 @@
   }
   .inner-hero-title span {
     font-size: 60px;
+  }
+  .inner-title {
+    font-size: 44px;
+    margin-bottom: 10px;
+  }
+  .inner-title span {
+    font-size: 52px;
+  }
+  .blog-card-grid {
+    gap: 50px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .title-cta-2 {
+    font-size: 40px;
   }
 }
