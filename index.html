@@ -30,18 +30,29 @@
                             </div>
                         </div>
                         <ul class="menu-list">
-                            <li class="dropdown">
-                                <a href="javascript:void(0)" class="menu-name">WHO WE ARE</a>
-                                <div class="plush-img">
-                                    <img src="./assests/images/plush-img.png" alt="plush-img">
-                                </div>
-                                <!-- <div class="dropdown-item">
+                            <li class="dropdown ">
+                               <div class="">
+                                   <a href="javascript:void(0)" class="menu-name">WHO WE ARE</a>
+                                   <div class="plush-img accordion-header">
+                                       <img src="./assests/images/plush-header.png" alt="plush-img">
+                                   </div>
+                               </div>
+                                <div class="dropdown-item accordion-content">
                                     <ul class="dropdown-list">
                                         <li>
-                                            <a href="javascript:void(0)" class="dropdown-name">OUR ETHOS</a>
+                                            <a href="javascript:void(0)" class="dropdown-name">OUR ETHOS </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="dropdown-name">LEADERSHIP</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="dropdown-name">GOVERNANCE </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="dropdown-name">JOIN US </a>
                                         </li>
                                     </ul>
-                                </div> -->
+                                </div>
                             </li>
                             <li><a href="javascript:void(0)" class="menu-name">ACADEMIES</a></li>
                             <li>
@@ -151,8 +162,30 @@
                             </p>
                         </div>
                         <a href="javascript:void(0)" class="btn btn-primary">OUR ACADEMIES</a>
+                        <div class="accordion">
+                            <div class="accordion-item">
+                                <div class="accordion-header">Section 1</div>
+                                <div class="accordion-content">
+                                    <p>This is the content for section 1.</p>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <div class="accordion-header">Section 2</div>
+                                <div class="accordion-content">
+                                    <p>This is the content for section 2.</p>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <div class="accordion-header">Section 3</div>
+                                <div class="accordion-content">
+                                    <p>This is the content for section 3.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                
+
             </div>
         </section>
     </main>
@@ -176,26 +209,33 @@
                 </div>
                 <div class="footer-info">
                     <h6 class="info-title">KEY INFORMATION</h6>
-                    <div class="info-items">
-                        <a href="tel:01902518981" class="info-link">
-                            <div class="info-icon">
-                                <img src="./assests/images/call.svg" alt="call">
-                            </div>
-                            <h4 class="info-text">01902 518981</h4>
-                        </a>
-                        <a href="tel:01902518981" class="info-link">
-                            <div class="info-icon">
-                                <img src="./assests/images/email.svg" alt="email">
-                            </div>
-                            <h4 class="info-text">info@uwmat.co.uk</h4>
-                        </a>
-                        <a href="tel:01902518981" class="info-link">
-                            <div class="info-icon">
-                                <img src="./assests/images/location.svg" alt="location">
-                            </div>
-                            <h4 class="info-text">Albert Bradbeer, Primary Academy Turves Green, Birmingham, B31 4RD</h4>
-                        </a>
-                    </div>
+                    <ul class="info-items">
+                        <li>
+                            <a href="tel:01902518981" class="info-link">
+                                <div class="info-icon">
+                                    <img src="./assests/images/call.svg" alt="call">
+                                </div>
+                                <h4 class="info-text">01902 518981</h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:" class="info-link">
+                                <div class="info-icon">
+                                    <img src="./assests/images/email.svg" alt="email">
+                                </div>
+                                <h4 class="info-text">info@uwmat.co.uk</h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="info-link">
+                                <div class="info-icon">
+                                    <img src="./assests/images/location.svg" alt="location">
+                                </div>
+                                <h4 class="info-text">Albert Bradbeer, Primary Academy Turves Green, Birmingham, B31 4RD</h4>
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="javascript:void(0)" class="direct-item h6">GET DIRECTIONS</a>
                 </div>
                 <div class="footer-links-items">
                     <h6 class="info-title">USEFUL LINKS</h6>
@@ -276,6 +316,19 @@
                 }
             })
         })
+    </script>
+    <script>
+    $(document).ready(function () {
+            $(".accordion-header").click(function () {
+
+                $(".accordion-header").not(this).removeClass("active");
+                $(this).toggleClass("active");
+
+                $(".accordion-content").not($(this).next()).slideUp();
+
+                $(this).next(".accordion-content").slideToggle();
+            });
+        });
     </script>
 </body>
 

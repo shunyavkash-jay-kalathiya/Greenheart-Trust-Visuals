@@ -5,6 +5,44 @@
   .logo-items {
     display: none;
   }
+  .dropdown-item {
+    position: absolute;
+    padding-top: 20px;
+    padding-bottom: 58px;
+    top: 200%;
+    z-index: 6;
+    height: fit-content;
+    transition: all 0.4s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .plush-img {
+    transition: all 0.5s ease-in-out;
+  }
+  .dropdown:hover .plush-img {
+    transform: rotate(60deg);
+  }
+
+  .dropdown:hover .dropdown-item {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(10px);
+  }
+
+  .dropdown-item::after {
+    content: "";
+    position: absolute;
+    background: white;
+    height: 100%;
+    transition: all 0.4s ease-in-out;
+    top: 0;
+    z-index: -1;
+    left: -100vw;
+    width: 200vw;
+  }
+  .menu-list li:has(.menu-name):not(:last-child) {
+    margin-right: 36px;
+  }
 }
 @media (max-width: 1280px) {
   .footer-content {
@@ -201,6 +239,12 @@
   .title-cta-2 {
     font-size: 50px;
   }
+  .accordion-content {
+    display: none;
+  }
+  .dropdown {
+    flex-direction: column;
+  }
 }
 @media (max-width: 767px) {
   h1,
@@ -230,6 +274,9 @@
   .footer-content {
     grid-template-columns: repeat(1, 1fr);
     gap: 60px;
+  }
+  .footer-info {
+    grid-column: 1 / 1;
   }
   .footer-title {
     white-space: nowrap;
@@ -263,5 +310,20 @@
   }
   .title-cta-2 {
     font-size: 40px;
+  }
+  .tame-card-section .splide__arrows {
+    display: none;
+  }
+  .tame-title {
+    font-size: 44px;
+  }
+  .group-btn {
+    white-space: nowrap;
+    font-size: 10px;
+    padding: 8px 20px;
+  }
+  .btn-groups {
+    overflow-x: auto;
+    gap: 10px;
   }
 }
