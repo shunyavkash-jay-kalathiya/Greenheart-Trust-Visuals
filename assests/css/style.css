@@ -6,6 +6,7 @@
 
 body {
   font-family: var(--raleway);
+  overflow-x: hidden;
 }
 
 :root {
@@ -22,7 +23,6 @@ body {
   --font-size-28: 28px;
   --font-size-34: 34px;
   --font-size-80: 80px;
-
   --font-size-140: 140px;
   --section-clip: polygon(0 0, 100% 0%, 100% 95%, 0% 100%);
 }
@@ -227,7 +227,10 @@ p,
 .dropdown {
   position: relative;
 }
-
+.dropdown-flex {
+  display: flex;
+  gap: 12px;
+}
 .dropdown-list li:not(:last-child) {
   margin-bottom: 34px;
 }
@@ -237,9 +240,17 @@ p,
 }
 .header-2 {
   position: static;
+  padding: 52px 0;
+  transition: all 0.4s ease-in-out;
 }
 .header-2 .menu-name {
   color: var(--paragraph-color);
+}
+.plush-img {
+  transition: all 0.5s ease-in-out;
+}
+.active-in .plush-img {
+  transform: rotate(45deg);
 }
 .toggle-black img {
   filter: invert(1);
@@ -978,5 +989,28 @@ input:focus-visible {
 .cta-section-4 .cta-img-item-3 {
   width: 50%;
 }
-.cta-section-4 .cta-img-4 imgh {
+.flex-cta-4{
+  display: flex;
+}
+.flex-cta-4{
+  padding: 40px 33px;
+  align-items: center;
+  background-color: var(--paragraph-color);
+}
+.cta-item-4{
+  width: 50%;
+}
+.cta-img-item-4{
+width: 50%;
+}
+.cta-img-4{
+  width: 100%;
+  height: 100%;
+  max-height: 382px;
+  aspect-ratio: 1/1;
+}
+.cta-img-4 img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

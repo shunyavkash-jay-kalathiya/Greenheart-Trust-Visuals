@@ -6,6 +6,7 @@
     display: none;
   }
   .dropdown-item {
+    display: block !important;
     position: absolute;
     padding-top: 20px;
     padding-bottom: 58px;
@@ -19,8 +20,12 @@
   .plush-img {
     transition: all 0.5s ease-in-out;
   }
+  .header .plush-img img {
+    filter: invert(1);
+    transition: all 0.5s ease-in-out;
+  }
   .dropdown:hover .plush-img {
-    transform: rotate(60deg);
+    transform: rotate(48deg);
   }
 
   .dropdown:hover .dropdown-item {
@@ -39,6 +44,19 @@
     z-index: -1;
     left: -100vw;
     width: 200vw;
+  }
+  .header-2 .dropdown-item::after {
+    content: "";
+    position: absolute;
+    background: white;
+    box-shadow: 0 3px 10px var(--paragraph-color),
+      0 3px 10px var(--paragraph-color);
+    height: 100%;
+    transition: all 0.4s ease-in-out;
+    top: 0;
+    z-index: -1;
+    left: -50%;
+    width: 200%;
   }
   .menu-list li:has(.menu-name):not(:last-child) {
     margin-right: 36px;
@@ -245,6 +263,25 @@
   .dropdown {
     flex-direction: column;
   }
+  .accordion-collapse {
+    display: none;
+  }
+  .flex-cta-4 {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .cta-item-4 {
+    width: 100%;
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .cta-img-item-4 {
+    width: 100%;
+    order: 1;
+  }
 }
 @media (max-width: 767px) {
   h1,
@@ -269,7 +306,8 @@
     line-height: 1.49;
   }
   .hero-section {
-    background-position: right;
+    height: 100%;
+    background-position: -688px;
   }
   .footer-content {
     grid-template-columns: repeat(1, 1fr);
@@ -325,5 +363,14 @@
   .btn-groups {
     overflow-x: auto;
     gap: 10px;
+  }
+  .flex-cta-4{
+    padding:0 40px;
+  }
+  .cta-img-4 {
+    width: calc(100% + 80px);
+    height: calc(100% + 40px);
+    margin: 0 -40px;
+    max-height: 277px;
   }
 }
